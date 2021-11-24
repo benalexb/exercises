@@ -1,0 +1,34 @@
+.container {
+  margin: 4px;
+  max-width: 600px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-container button,
+.grid-container input {
+  height: 40px;
+}
+
+.text-input {
+  grid-column: 1 / span 3;
+}
+
+.submit-button {
+  grid-column: 1 / span 3;
+}
+
+.submissions {
+  display: flex;
+  flex-direction: column;
+}
+
+.submissions p {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 10px;
+}

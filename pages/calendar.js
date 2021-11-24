@@ -1,4 +1,4 @@
-import Calendar from '../components/Calendar';
+import Calendar from '../src/components/Calendar';
 
 /*
  * The purpose of this exercise is to get familiar with CSS Grid layouts.

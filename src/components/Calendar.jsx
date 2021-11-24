@@ -3,9 +3,9 @@ import { useMemo, useState } from 'react';
 import { DateTime, Info, Duration } from 'luxon';
 import clsx from 'clsx';
 import { range } from 'lodash';
-import styles from './Calendar.module.css';
+import styles from '../styles/Calendar.module.css';
 
-const Cell = ({ children, strong, highlight }, key) => {
+export const Cell = ({ children, strong, highlight }, key) => {
   const classes = clsx(
     styles.cell,
     {
