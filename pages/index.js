@@ -10,6 +10,9 @@ const Home = () => (
       <li>
         <Link href="/numpad">NumPad</Link>
       </li>
+      <li>
+        <Link href="/calculator">Calculator</Link>
+      </li>
     </ul>
   </div>
 );

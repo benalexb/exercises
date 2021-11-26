@@ -1,0 +1,18 @@
+.num-key {
+  height: 64px;
+  border-radius: 32px;
+  font-size: 24px;
+  border: none;
+  box-shadow: 0px 0px 4px 0px;
+}
+
+.default {}
+.result {
+  grid-column: 3 / span 2;
+}
+
+.num-key:active {
+  /* outline: 1px darkgray solid; */
+  box-shadow: 0px 0px 2px 0px;
+  background-color: lightgray;
+}
