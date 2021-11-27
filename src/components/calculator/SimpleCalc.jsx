@@ -45,7 +45,9 @@ const ROWS = [
   ...ROW_5,
 ];
 
-const isOperator = (char) => ['+', '-', '/'].includes(char);
+const isOperator = (char) => ['+', '-', '/', '*'].includes(char);
+
+const hasOperator = (inputValue) => inputValue.split('').some((char) => isOperator(char));
 
 const handleAction = (key, displayValue, setDisplayValue, fullInput, setFullInput) => {
   if (key.command === 'clear') {
@@ -55,34 +57,41 @@ const handleAction = (key, displayValue, setDisplayValue, fullInput, setFullInpu
 
   if (key.command === 'result') {
     // eslint-disable-next-line no-eval
-    setDisplayValue(`${eval(fullInput)}`);
-    setFullInput('');
+    const result = `${eval(fullInput)}`;
+    setDisplayValue(result);
+    setFullInput(result);
   }
 };
 
 const handleOperation = (key, displayValue, setDisplayValue, fullInput, setFullInput) => {
   // Check if the last entry in the full input is an operator. Operators cannot be consecutive.
-  if (key.value !== '=' && !isOperator(fullInput[fullInput.length - 1])) {
+  if (!isOperator(fullInput[fullInput.length - 1])) {
     setFullInput(fullInput + key.value);
+  }
+
+  // When an operator is being pressed for the second time, we show a partial result on the display.
+  if (hasOperator(fullInput)) {
+    // eslint-disable-next-line no-eval
+    setDisplayValue(`${eval(fullInput)}`);
   }
 };
 
 const handleNumber = (key, displayValue, setDisplayValue, fullInput, setFullInput) => {
   const { value } = key;
+  let newDisplayValue = value;
+  let newFullInput = fullInput + value;
 
-  if (displayValue[0] === '0' && value !== 0) {
-    setDisplayValue(value);
-    setFullInput(value);
+  if (displayValue[0] !== '0' && !isOperator(fullInput[fullInput.length - 1])) {
+    newDisplayValue = displayValue + value;
+    newFullInput = fullInput + value; // TODO: remove later if not needed.
   }
 
-  if (displayValue[0] !== '0') {
-    setDisplayValue(displayValue + value);
-    setFullInput(fullInput + value);
-  }
+  setDisplayValue(newDisplayValue);
+  setFullInput(newFullInput);
 };
 
 const handleDelimiter = (key) => {
-  console.log('Called handleDelimiter() with key', key); // bbarreto_debug
+  console.log('Called handleDelimiter() with key', key); // TODO: remove when no longer needed.
 };
 
 const Controller = {
@@ -100,9 +109,8 @@ const SimpleCalc = () => {
     Controller[key.type](key, displayValue, setDisplayValue, fullInput, setFullInput);
   };
 
-  // bbarreto_debug
   useEffect(() => {
-    console.log('fullInput', fullInput);
+    console.log('fullInput', fullInput); // TODO: remove when no longer needed.
   }, [fullInput]);
 
   return (
