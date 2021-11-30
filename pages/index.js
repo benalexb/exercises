@@ -27,6 +27,9 @@ const Home = () => (
       <li>
         <Link href="/perf/hook-reducer-state">Hook with a reducer</Link>
       </li>
+      <li>
+        <Link href="/perf/context-simple-state">Context with useState</Link>
+      </li>
     </ul>
   </div>
 )
