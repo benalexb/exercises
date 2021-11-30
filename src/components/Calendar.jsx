@@ -1,58 +1,58 @@
-import PropTypes from 'prop-types';
-import { useMemo, useState } from 'react';
-import { DateTime, Info, Duration } from 'luxon';
-import clsx from 'clsx';
-import { range } from 'lodash';
-import styles from '../styles/Calendar.module.css';
+import React, { useMemo, useState } from 'react'
+import { DateTime, Info, Duration } from 'luxon'
+import PropTypes from 'prop-types'
+import clsx from 'clsx'
+import { range } from 'lodash'
+import styles from '../styles/Calendar.module.css'
 
 export const Cell = ({ children, strong, highlight }, key) => {
   const classes = clsx(
     styles.cell,
     {
       [styles.strong]: strong,
-      [styles.highlight]: highlight,
-    },
-  );
-  return <div key={key} className={classes}>{children}</div>;
-};
+      [styles.highlight]: highlight
+    }
+  )
+  return <div key={key} className={classes}>{children}</div>
+}
 
 Cell.defaultProps = {
   children: null,
   strong: false,
-  highlight: false,
-};
+  highlight: false
+}
 
 Cell.propTypes = {
   children: PropTypes.node,
   strong: PropTypes.bool,
-  highlight: PropTypes.bool,
-};
+  highlight: PropTypes.bool
+}
 
 const Calendar = () => {
-  const today = DateTime.now().startOf('day');
-  const [selectedDate, setSelectedDate] = useState(today);
+  const today = DateTime.now().startOf('day')
+  const [selectedDate, setSelectedDate] = useState(today)
 
   const onPreviousClick = () => {
-    const duration = Duration.fromObject({ months: 1 });
-    const newDate = selectedDate.minus(duration);
-    setSelectedDate(newDate.startOf('month'));
-  };
+    const duration = Duration.fromObject({ months: 1 })
+    const newDate = selectedDate.minus(duration)
+    setSelectedDate(newDate.startOf('month'))
+  }
 
   const onNextClick = () => {
-    const duration = Duration.fromObject({ months: 1 });
-    const newDate = selectedDate.plus(duration);
-    setSelectedDate(newDate.startOf('month'));
-  };
+    const duration = Duration.fromObject({ months: 1 })
+    const newDate = selectedDate.plus(duration)
+    setSelectedDate(newDate.startOf('month'))
+  }
 
   const onTodayClick = () => {
-    setSelectedDate(today);
-  };
+    setSelectedDate(today)
+  }
 
   // Determine in which day of the week we start looping days.
-  const gapRange = useMemo(() => range(1, selectedDate.weekday), [selectedDate]);
+  const gapRange = useMemo(() => range(1, selectedDate.weekday), [selectedDate])
 
   // Not all months have the same amount of days.
-  const dayRange = useMemo(() => range(1, selectedDate.endOf('month').day + 1), [selectedDate]);
+  const dayRange = useMemo(() => range(1, selectedDate.endOf('month').day + 1), [selectedDate])
 
   return (
     <div className={styles.container}>
@@ -70,12 +70,12 @@ const Calendar = () => {
           <Cell key={`gap-${gap}`} />
         ))}
         {dayRange.map((day) => {
-          const isToday = today.diff(selectedDate.set({ day }).startOf('day')).toObject().milliseconds === 0;
-          return <Cell key={day} highlight={isToday}>{day}</Cell>;
+          const isToday = today.diff(selectedDate.set({ day }).startOf('day')).toObject().milliseconds === 0
+          return <Cell key={day} highlight={isToday}>{day}</Cell>
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Calendar;
+export default Calendar

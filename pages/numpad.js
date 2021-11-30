@@ -1,4 +1,5 @@
-import NumPad from '../src/components/NumPad';
+import React from 'react'
+import NumPad from '../src/components/NumPad'
 
 /*
  * The purpose of this exercise is to create a simple numpad the user can click. At the top, there
@@ -13,6 +14,6 @@ import NumPad from '../src/components/NumPad';
  * same container.
  */
 
-const NumPadPage = () => <NumPad />;
+const NumPadPage = () => <NumPad />
 
-export default NumPadPage;
+export default NumPadPage

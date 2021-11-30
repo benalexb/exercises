@@ -1,33 +1,33 @@
-import { useState } from 'react';
-import styles from '../styles/NumPad.module.css';
+import React, { useState } from 'react'
+import styles from '../styles/NumPad.module.css'
 
-const PAD_OPTIONS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#'];
+const PAD_OPTIONS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#']
 
 const NumPad = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [submissions, setSubmissions] = useState([]);
+  const [inputValue, setInputValue] = useState('')
+  const [submissions, setSubmissions] = useState([])
 
   const onInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+    setInputValue(event.target.value)
+  }
 
   const onNumOptionClick = (numOption) => {
-    setInputValue(inputValue + numOption);
-  };
+    setInputValue(inputValue + numOption)
+  }
 
   const onSubmitClick = () => {
     if (inputValue.length) {
-      setSubmissions([...submissions, inputValue]);
-      setInputValue('');
+      setSubmissions([...submissions, inputValue])
+      setInputValue('')
     }
-  };
+  }
 
   const onSubmitEntryClick = (submissionEntry, submissionIndex) => {
-    setInputValue(submissionEntry);
-    const submissionsCopy = [...submissions];
-    submissionsCopy.splice(submissionIndex, 1);
-    setSubmissions(submissionsCopy);
-  };
+    setInputValue(submissionEntry)
+    const submissionsCopy = [...submissions]
+    submissionsCopy.splice(submissionIndex, 1)
+    setSubmissions(submissionsCopy)
+  }
 
   return (
     <div className={styles.container}>
@@ -66,7 +66,7 @@ const NumPad = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NumPad;
+export default NumPad

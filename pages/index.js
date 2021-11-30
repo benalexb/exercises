@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import styles from '../src/styles/Home.module.css';
+import React from 'react'
+import Link from 'next/link'
+import styles from '../src/styles/Home.module.css'
 
 const Home = () => (
   <div className={styles.container}>
@@ -28,6 +29,6 @@ const Home = () => (
       </li>
     </ul>
   </div>
-);
+)
 
-export default Home;
+export default Home

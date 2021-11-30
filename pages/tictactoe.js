@@ -1,5 +1,6 @@
-import TicTacToe from '../src/components/tictactoe/TicTacToe';
+import React from 'react'
+import TicTacToe from '../src/components/tictactoe/TicTacToe'
 
-const TicTacToePage = () => <TicTacToe />;
+const TicTacToePage = () => <TicTacToe />
 
-export default TicTacToePage;
+export default TicTacToePage

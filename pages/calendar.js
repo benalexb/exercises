@@ -1,4 +1,5 @@
-import Calendar from '../src/components/Calendar';
+import React from 'react'
+import Calendar from '../src/components/Calendar'
 
 /*
  * The purpose of this exercise is to get familiar with CSS Grid layouts.
@@ -7,6 +8,6 @@ import Calendar from '../src/components/Calendar';
  * data, and even make it so the user can navigate the months, but that is not the main goal.
  */
 
-const CalendarPage = () => <Calendar />;
+const CalendarPage = () => <Calendar />
 
-export default CalendarPage;
+export default CalendarPage

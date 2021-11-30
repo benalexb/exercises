@@ -1,4 +1,5 @@
-import SimpleCalc from '../src/components/calculator/SimpleCalc';
+import React from 'react'
+import SimpleCalc from '../src/components/calculator/SimpleCalc'
 
 /*
  * The goal of this exercise is to create a simple calculator, mimicing the behavior of the iOS
@@ -6,6 +7,6 @@ import SimpleCalc from '../src/components/calculator/SimpleCalc';
  * number input is not necessary. Input is inserted by pressing keys on the keypad.
  */
 
-const CalculatorPage = () => <SimpleCalc />;
+const CalculatorPage = () => <SimpleCalc />
 
-export default CalculatorPage;
+export default CalculatorPage

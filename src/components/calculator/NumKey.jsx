@@ -1,13 +1,14 @@
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
-import styles from '../../styles/calculator/NumKey.module.css';
+import React from 'react'
+import clsx from 'clsx'
+import PropTypes from 'prop-types'
+import styles from '../../styles/calculator/NumKey.module.css'
 
 const NumKey = ({ children, onClick, variant }, key) => {
   const handleClick = () => {
-    onClick && onClick();
-  };
+    onClick && onClick()
+  }
 
-  const classes = clsx(styles['num-key'], { [styles[variant]]: variant });
+  const classes = clsx(styles['num-key'], { [styles[variant]]: variant })
 
   return (
     <button
@@ -18,18 +19,18 @@ const NumKey = ({ children, onClick, variant }, key) => {
     >
       {children}
     </button>
-  );
-};
+  )
+}
 
 NumKey.defaultProps = {
   onClick: null,
-  variant: 'default',
-};
+  variant: 'default'
+}
 
 NumKey.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['default', 'result']),
-};
+  variant: PropTypes.oneOf(['default', 'result'])
+}
 
-export default NumKey;
+export default NumKey
