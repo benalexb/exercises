@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContextSimpleState = () => {
   return (
-    <div>Context using simple state</div>
+    <div>Context using simple state!</div>
   )
 }
 
