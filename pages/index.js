@@ -30,6 +30,9 @@ const Home = () => (
       <li>
         <Link href="/perf/context-simple-state">Context with useState</Link>
       </li>
+      <li>
+        <Link href="/perf/context-reducer-state">Context with reducer</Link>
+      </li>
     </ul>
   </div>
 )

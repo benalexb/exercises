@@ -1,9 +1,13 @@
 import React from 'react'
+import ContextSimpleState from '../../src/components/context-simple-state/ContextSimpleState'
+import { SimpleStoreProvider } from '../../src/components/context-simple-state/SimpleStore.jsx'
 
-const ContextSimpleState = () => {
+const ContextSimpleStatePage = () => {
   return (
-    <div>Context using simple state!</div>
+    <SimpleStoreProvider>
+      <ContextSimpleState />
+    </SimpleStoreProvider>
   )
 }
 
-export default ContextSimpleState
+export default ContextSimpleStatePage
