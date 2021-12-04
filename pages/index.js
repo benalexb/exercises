@@ -33,6 +33,9 @@ const Home = () => (
       <li>
         <Link href="/perf/context-reducer-state">Context with reducer</Link>
       </li>
+      <li>
+        <Link href="/perf/redux-state">Redux state</Link>
+      </li>
     </ul>
   </div>
 )

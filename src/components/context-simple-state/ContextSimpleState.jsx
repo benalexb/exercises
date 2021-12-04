@@ -2,9 +2,9 @@ import React from 'react'
 import { useSimpleStore } from './SimpleStore'
 
 const ContextSimpleState = () => {
-  const { bogusProperty, bogusState } = useSimpleStore()
+  const { bogusProperty } = useSimpleStore()
 
-  console.log('Rendered ContextSimpleState', bogusProperty, bogusState)
+  console.log('Rendered ContextSimpleState', bogusProperty)
 
   return (
     <div>Context using simple state!</div>

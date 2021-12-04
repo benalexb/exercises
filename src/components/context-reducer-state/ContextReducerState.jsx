@@ -2,9 +2,9 @@ import React from 'react'
 import { useReducerStore } from './ReducerStore'
 
 const ContextReducerState = () => {
-  const { bogusProperty, bogusState } = useReducerStore()
+  const { bogusProperty } = useReducerStore()
 
-  console.log('Rendered ContextReducerState', bogusProperty, bogusState)
+  console.log('Rendered ContextReducerState', bogusProperty)
 
   return (
     <div>Context using reducer state</div>
