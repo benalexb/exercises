@@ -1,0 +1,12 @@
+.tile {
+  min-height: 75px;
+  min-width: 75px;
+  border: none;
+  background-color: white;
+  font-size: 50px;
+}
+
+.tile:hover {
+  cursor: pointer;
+  border: 1px solid blue;
+}
