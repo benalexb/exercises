@@ -1,0 +1,48 @@
+.marker {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+}
+
+.first-row {
+  top: 38px;
+}
+
+.second-row {
+  top: 114px;
+}
+
+.third-row {
+  top: 192px;
+}
+
+.first-col {
+  top: 119px;
+  transform: rotate(90deg) translate(-7px, 76px);
+  width: 229px;
+}
+
+.second-col {
+  top: 119px;
+  transform: rotate(90deg) translate(-7px, -3px);
+  width: 229px;
+}
+
+.third-col {
+  top: 119px;
+  transform: rotate(90deg) translate(-7px, -83px);
+  width: 229px;
+}
+
+.trans-one {
+  top: 119px;
+  transform: rotate(45deg) translate(-32px, 21px);
+  width: 311px;
+}
+
+.trans-two {
+  top: 119px;
+  transform: rotate(135deg) translate(22px, 29px);
+  width: 311px;
+}
