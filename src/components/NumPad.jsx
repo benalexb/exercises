@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../styles/NumPad.module.css'
+import styles from './NumPad.module.css'
 
 const PAD_OPTIONS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#']
 

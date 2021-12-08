@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
-import styles from '../../styles/calculator/NumKey.module.css'
+import styles from './NumKey.module.css'
 
 const NumKey = ({ children, onClick, variant }, key) => {
   const handleClick = () => {

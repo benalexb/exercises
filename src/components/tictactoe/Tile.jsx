@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../../styles/tictactoe/Tile.module.css'
+import styles from './Tile.module.css'
 
 const Tile = ({ children, onClick }) => {
   const handleClick = () => {

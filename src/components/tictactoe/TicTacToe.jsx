@@ -10,7 +10,7 @@ import WinMarker, {
   TRANS_ONE,
   TRANS_TWO
 } from './WinMarker'
-import styles from '../../styles/tictactoe/TicTacToe.module.css'
+import styles from './TicTacToe.module.css'
 
 const initialState = {
   turn: 'x', // x | o

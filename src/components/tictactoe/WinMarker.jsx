@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
-import styles from '../../styles/tictactoe/WinMarker.module.css'
+import styles from './WinMarker.module.css'
 
 export const FIRST_ROW = 'first-row'
 export const SECOND_ROW = 'second-row'

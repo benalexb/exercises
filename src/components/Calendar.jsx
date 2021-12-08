@@ -3,7 +3,7 @@ import { DateTime, Info, Duration } from 'luxon'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import { range } from 'lodash'
-import styles from '../styles/Calendar.module.css'
+import styles from './Calendar.module.css'
 
 export const Cell = ({ children, strong, highlight }, key) => {
   const classes = clsx(

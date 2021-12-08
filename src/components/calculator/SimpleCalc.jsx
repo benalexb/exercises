@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import NumKey from './NumKey'
 import InputDisplay from './InputDisplay'
-import styles from '../../styles/calculator/SimpleCalc.module.css'
+import styles from './SimpleCalc.module.css'
 
 const ROW_1 = [
   { type: 'action', command: 'clear', face: 'AC' },
