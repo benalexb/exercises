@@ -49,8 +49,15 @@ export const WordGuessing = () => {
     <div className={styles.container}>
       <h1>{`Turn: ${turn}`}</h1>
       <form className={styles.form} onSubmit={onFormSubmit}>
-        <input type="text" name="guess" maxLength={1} value={guess} onChange={onInputChange} />
-        <button type="submit">Check!</button>
+        <input
+          type="text"
+          name="guess"
+          maxLength={1}
+          value={guess}
+          onChange={onInputChange}
+          data-testid="guess-input"
+        />
+        <button type="submit" data-testid="guess-submit">Check!</button>
       </form>
       <div className={styles.board}>
         {randomWord.split('').map((char, index) => {
