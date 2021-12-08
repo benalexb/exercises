@@ -18,6 +18,9 @@ const Home = () => (
       <li>
         <Link href="/tictactoe">TicTacToe</Link>
       </li>
+      <li>
+        <Link href="/word-guess">Word Guessing Game</Link>
+      </li>
     </ul>
     <h2>Performance</h2>
     <ul>
